@@ -1,0 +1,250 @@
+/* Main Container */
+.invoice-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+/* Line Items Section */
+.line-items-section {
+    margin-bottom: 24px;
+}
+
+.grid-header {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr 2fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+/* Input Fields */
+.input-field {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* Buttons */
+.edit-button, .delete-button {
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.edit-button {
+    color: #3b82f6;
+}
+
+.edit-button:hover {
+    color: #2563eb;
+}
+
+.delete-button {
+    color: #dc2626;
+}
+
+.delete-button:hover {
+    color: #991b1b;
+}
+
+.add-item-button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-item-button:hover {
+    background-color: #2563eb;
+}
+
+/* Icons */
+.edit-icon, .trash-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.plus-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* GST Summary Section */
+.gst-summary-section {
+    margin-bottom: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.summary-grid-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.summary-grid-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* Total Summary Section */
+.total-summary-section {
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+.total-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.amount {
+    text-align: right;
+}
+
+.total {
+    font-size: 18px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-content .input-field {
+    margin-bottom: 16px;
+}
+
+.save-button, .cancel-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+.save-button {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #2563eb;
+}
+
+.cancel-button {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.cancel-button:hover {
+    background-color: #d1d5db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .invoice-container {
+        padding: 16px;
+    }
+
+    .grid-header,
+    .grid-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .summary-grid-header,
+    .summary-grid-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .total-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .amount {
+        text-align: center;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 16px;
+    }
+}
